@@ -2,25 +2,19 @@
 
 ## Overview
 
-The Sales Reporting System is a data-driven application designed to manage, analyze, and generate structured sales reports using Python and SQL. The project demonstrates database design, query optimization, data processing, and report generation using real-world sales data.
+The Sales Reporting System is a data-driven application designed to manage, analyze, and generate structured sales reports using Python and SQL. This project demonstrates database design, SQL-based analytics, and automated reporting through Python integration. It is structured to showcase practical skills in database systems, data processing, and reporting automation.
 
-This repository integrates:
-- A relational database schema
-- SQL scripts for table creation and reporting logic
-- A Python application for automation and analysis
-- Sample datasets for testing and demonstration
-
-The system is intended for academic, analytical, and portfolio demonstration purposes.
+The system integrates a relational database schema, SQL reporting logic, a Python application for execution, and sample datasets for demonstration and testing.
 
 ---
 
 ## Objectives
 
-- Design and implement a structured sales database
-- Perform data aggregation and reporting using SQL
-- Automate reporting logic using Python
+- Design and implement a structured relational sales database
+- Perform data aggregation and analysis using SQL
+- Automate reporting workflows using Python
 - Demonstrate integration between CSV data and SQL databases
-- Provide clear, maintainable, and reproducible project structure
+- Maintain clean and modular project structure
 
 ---
 
@@ -36,49 +30,42 @@ sales-reporting/
 ├── Screenshot_*.png
 └── README.md
 
+---
 
-### File Descriptions
+## File Descriptions
 
 **app.py**  
-Main Python application responsible for:
-- Connecting to the database
-- Loading sales data
-- Executing reporting queries
-- Displaying or exporting results
+Main Python application responsible for connecting to the database, executing reporting queries, and displaying results.
 
 **databasecrt.sql**  
 SQL script used to create the database schema, including tables, constraints, and relationships.
 
 **codeofsales.sql**  
-Contains SQL queries used for:
-- Data aggregation
-- Revenue calculations
-- Reporting summaries
-- Analytical queries
+Contains SQL queries for revenue calculations, aggregation, summaries, and reporting logic.
 
 **sales_data_december_2025.csv**  
-Sample dataset used for populating the database and testing report generation.
+Sample dataset used to populate the database and test reporting functionality.
 
 **Project_FinalReport_Sampleoutline (1).docx**  
-Supporting documentation outlining the structure of the final project report.
+Supporting documentation outlining the structure of the final report.
 
-**Screenshots**  
-Demonstrations of application execution and output results.
+**Screenshot Files**  
+Images demonstrating application output and report results.
 
 ---
 
 ## System Architecture
 
-The system follows a simple three-layer structure:
+The system follows a three-layer structure:
 
 1. Data Layer  
-   SQL database storing structured sales records.
+   A relational SQL database storing structured sales records.
 
 2. Processing Layer  
-   Python application responsible for querying and processing data.
+   A Python application that executes queries and processes data.
 
 3. Reporting Layer  
-   Aggregated outputs displayed via console or generated as structured summaries.
+   Aggregated outputs presented via console or structured summaries.
 
 ---
 
@@ -87,12 +74,95 @@ The system follows a simple three-layer structure:
 ### Prerequisites
 
 - Python 3.8 or higher
-- PostgreSQL (or compatible SQL database)
+- PostgreSQL or compatible SQL database
 - pip package manager
 
-### Required Python Packages
+### Install Required Packages
 
-Install dependencies manually if no `requirements.txt` is provided:
+If no requirements file is provided, install dependencies manually:
 
-```bash
 pip install pandas psycopg2 sqlalchemy
+
+Adjust according to the libraries used inside app.py.
+
+---
+
+## Database Setup
+
+1. Open your SQL client (e.g., pgAdmin or psql).
+2. Run the schema creation script:
+
+   \i databasecrt.sql
+
+3. Execute reporting or additional logic:
+
+   \i codeofsales.sql
+
+4. Import the CSV dataset into the corresponding table if necessary.
+
+---
+
+## Running the Application
+
+From the root project directory:
+
+python app.py
+
+Ensure database credentials inside app.py are correctly configured before execution.
+
+---
+
+## Example Functionalities
+
+- Total revenue calculation
+- Monthly sales summary
+- Product-level aggregation
+- Customer purchase analysis
+- Period-based reporting
+
+---
+
+## Design Considerations
+
+- Relational integrity enforced through SQL constraints
+- Separation of schema creation and reporting logic
+- Modular structure for maintainability and scalability
+- Clear organization for academic or portfolio presentation
+
+---
+
+## Possible Extensions
+
+- Add a web dashboard using Streamlit or Flask
+- Implement real-time data ingestion
+- Add automated scheduled reporting
+- Integrate visualization libraries for analytics
+- Include forecasting or predictive modeling
+
+---
+
+## Academic Context
+
+This project demonstrates applied knowledge in:
+
+- Database Systems
+- SQL Query Optimization
+- Python Data Processing
+- Software Architecture
+- Reporting Automation
+
+It can serve as a portfolio project or course submission.
+
+---
+
+## License
+
+No license is currently specified. Consider adding an open-source license such as MIT or Apache 2.0 if public reuse is intended.
+
+---
+
+## Author
+
+Omar Mehraby  
+Computer Science Student  
+Al Akhawayn University
